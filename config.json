@@ -1,0 +1,14 @@
+[
+    {
+        "Destinataire": "admin",
+        "Titre": "All change",
+        "Filtre": [""],
+        "Body": "Il y a eu des changements dans ces fichiers : "
+    },
+    {
+        "Destinataire": "DSI",
+        "Titre": "Change in MFA and admin",
+        "Filtre": ["MFA","admin"],
+        "Body": "Il y a eu des changements dans ces fichiers : "
+    }
+]
