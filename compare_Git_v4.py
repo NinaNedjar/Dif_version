@@ -12,6 +12,8 @@ import stat
 from os import path
 import datetime
 
+name = os.getenv('name', 'DEFAULT_NAME')
+
 def getFilename(filename):
      filename=filename.split('.') #Recupère le nom de fichier
      return filename[0]
@@ -240,6 +242,24 @@ for filename in os.listdir(old_dir):
            
 with open(actual_dir + '/' + 'Report.json', 'w') as outfile:
     json.dump(jsonRepport,outfile, indent=4)
+
+def handler(event, context):
+    # TODO :: Implement
+    return 'Hello World!'
+
+if __name__ == '__main__':
+    event = {
+        'github_org': '',
+        'github_repo': '',
+        'github_branch': '',
+        'old_commit': '',
+        'new_commit': ''
+    }
+    message = json.dumps({'body': event})
+    handler(message, None)
+
+
+
 
 #Push du report sur Git
 """
